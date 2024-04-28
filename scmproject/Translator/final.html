@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Translator</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    #translator-container {
+      text-align: center;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #input-container,
+    #output-container {
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      width: 90%;
+      height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      cursor: pointer;
+      background-color:#007fff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color:#0753a0;
+    }
+
+    #outputText {
+      font-weight: bold;
+      color: #333;
+    }
+
+    #translationResult{
+      width: 95%;
+      height: 115px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 7px;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="translator-container">
+  <div id="input-container">
+    <h2>Input Text</h2>
+    <textarea id="inputText" placeholder="Enter text to translate"></textarea>
+    <label for="inputLanguage">Select Input Language:</label>
+    <select id="inputLanguage">
+      <option value="en">English</option>
+      <option value="sp">Spanish</option>
+      <option value="chinese">Chinese</option>
+      <option value="korean">Korean</option>
+      <option value="french">French</option>
+      <!-- Add more languages as needed -->
+    </select>
+  </div>
+
+  <button id="translateButton" onclick="translate()">Translate</button>
+
+  <div id="output-container"> <!-- Fixed the comment placement here -->
+    <h2>Translated Output</h2>
+    <p id="outputText"></p>
+    <label for="outputLanguage">Select Output Language:</label>
+    <select id="outputLanguage">
+      <option value="en">English</option>
+      <option value="es">Spanish</option>
+      <option value="hi">Hindi</option>
+      <option value="french">French</option>
+      <option value="korean">Korean</option>
+      <!-- Add more languages as needed -->
+    </select>
+    <div id="translationResultContainer">
+      <p id="translationResult"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Handle the translation when the button is clicked
+    $("#translateButton").click(function () {
+      // Get the text to translate
+      let textToTranslate = $("#inputText").val();
+
+      // Get the selected input and output languages
+      let inputLanguage = $("#inputLanguage").val();
+      let outputLanguage = $("#outputLanguage").val();
+
+      // Call the translation function based on languages
+      let translatedText = translateText(textToTranslate, inputLanguage, outputLanguage);
+
+      // Display the translated text in the translationResult div
+      $("#translationResult").text(translatedText);
+    });
+
+    // Translation function
+    function translateText(text, inputLang, outputLang) {
+      // Translation dictionaries for different languages
+      let translationDict = {
+  "en-es": {
+    "hello": "hola",
+    "world": "mundo",
+    "good": "bueno",
+    "morning": "mañana",
+    "afternoon": "tarde",
+    "evening": "noche",
+    "please": "por favor",
+    "thank you": "gracias",
+    "yes": "sí",
+    "no": "no",
+    "how are you": "¿cómo estás?",
+    "my name is": "mi nombre es",
+    "welcome": "bienvenido",
+    "goodbye": "adiós",
+    "today": "hoy",
+    "tomorrow": "mañana",
+    "yesterday": "ayer",
+    "happy": "feliz",
+    "sad": "triste",
+    "love": "amor",
+    "friend": "amigo",
+    "family": "familia",
+    "time": "tiempo",
+    "water": "agua",
+    "food": "comida",
+    "home": "hogar",
+    "work": "trabajo",
+    "play": "jugar",
+    "read": "leer",
+    "write": "escribir",
+    "learn": "aprender",
+    "school": "escuela",
+    "college": "universidad",
+    "money": "dinero",
+    "health": "salud",
+    "doctor": "médico",
+    "hospital": "hospital",
+    "car": "coche",
+    "bus": "autobús",
+    "train": "tren",
+    "plane": "avión",
+    "happy birthday": "feliz cumpleaños",
+    "good luck": "buena suerte",
+    "sorry": "lo siento",
+    "excuse me": "perdón",
+    "beautiful": "hermoso",
+    "ugly": "feo",
+    "big": "grande",
+    "small": "pequeño",
+    "hot": "caliente",
+    "cold": "frío",
+    "fast": "rápido",
+    "slow": "lento",
+    "old": "viejo",
+    "young": "joven",
+    "new": "nuevo",
+    "far": "lejos",
+    "near": "cerca",
+    "big": "grande",
+    "small": "pequeño",
+    "tall": "alto",
+    "short": "bajo",
+    "happy": "feliz",
+    "sad": "triste",
+    "angry": "enojado",
+    "surprised": "sorprendido",
+    "tired": "cansado",
+    "busy": "ocupado",
+    "bored": "aburrido",
+    "hungry": "hambriento",
+    "thirsty": "sediento",
+    "sleepy": "somnoliento",
+    "good morning": "buenos días",
+    "good afternoon": "buenas tardes",
+    "good evening": "buenas noches",
+    // Add more translations as needed
+  },
+  "en-hi": {
+    "hello": "नमस्ते",
+    "world": "दुनिया",
+    "good": "अच्छा",
+    "morning": "सुबह",
+    "afternoon": "अपराह्न",
+    "evening": "शाम",
+    "please": "कृपया",
+    "thank you": "धन्यवाद",
+    "yes": "हाँ",
+    "no": "नहीं",
+    "how are you": "आप कैसे हैं?",
+    "my name is": "मेरा नाम है",
+    "welcome": "स्वागत है",
+    "goodbye": "अलविदा",
+    "today": "आज",
+    "tomorrow": "कल",
+    "yesterday": "कल",
+    "happy": "खुश",
+    "sad": "उदास",
+    "love": "प्रेम",
+    "friend": "दोस्त",
+    "family": "परिवार",
+    "time": "समय",
+    "water": "पानी",
+    "food": "खाना",
+    "home": "घर",
+    "work": "काम",
+    "play": "खेलना",
+    "read": "पढ़ना",
+    "write": "लिखना",
+    "learn": "सीखना",
+    "school": "स्कूल",
+    "college": "कॉलेज",
+    "money": "पैसा",
+    "health": "स्वास्थ्य",
+    "doctor": "डॉक्टर",
+    "hospital": "अस्पताल",
+    "car": "कार",
+    "bus": "बस",
+    "train": "ट्रेन",
+    "plane": "विमान",
+    "happy birthday": "जन्मदिन मुबारक",
+    "good luck": "शुभकामनाएं",
+    "sorry": "माफ़ कीजिए",
+    "excuse me": "मुझे माफ़ करें",
+    "beautiful": "सुंदर",
+    "ugly": "बुरा",
+    "big": "बड़ा",
+    "small": "छोटा",
+    "hot": "गरम",
+    "cold": "ठंडा",
+    "fast": "तेज",
+    "slow": "धीरे",
+    "old": "पुराना",
+    "young": "जवान",
+    "new": "नया",
+    "far": "दूर",
+    "near": "नजदीक",
+    "big": "बड़ा",
+    "small": "छोटा",
+    "tall": "लंबा",
+    "short": "छोटा",
+    "angry": "गुस्सा",
+    "surprised": "आश्चर्यचकित",
+    "tired": "थका हुआ",
+    "busy": "व्यस्त",
+    "bored": "उबाऊ",
+    "hungry": "भूखा",
+    "thirsty": "प्यासा",
+    "sleepy": "ऊँघता हुआ",
+    "good morning": "सुप्रभात",
+    "good afternoon": "शुभ अपराह्न",
+    "good evening": "शुभ संध्या",
+    // Add more translations as needed
+  },
+  
+  // Add more language pairs as needed
+};
+
+
+      // Create a key for the language pair
+      let translationKey = `${inputLang}-${outputLang}`;
+
+      // Split the input text into words and replace each word with its translation
+      let translatedWords = text.toLowerCase().split(' ').map(function (word) {
+        return translationDict[translationKey][word] || word;
+      });
+
+      // Join the translated words back into a sentence
+      return translatedWords.join(' ');
+    }
+  });
+</script>
+</body>
+</html>

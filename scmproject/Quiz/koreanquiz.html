@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="KOREANQUIZ.CSS">
+  <style>
+  
+  
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color:#007bff;
+    margin-left:400px;
+  }
+  
+  .question {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Korean Language Quiz</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>What is the Korean word for "Hello"?</p>
+        <label>
+          <input type="radio" name="q1" value="incorrect">안녕히 가세요
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">고마워
+        </label>
+        <label>
+          <input type="radio" name="q1" value="correct">안녕하세요
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Goodbye" in Korean?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">안녕히 가세요
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">고마워
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">안녕하세요
+        </label>
+        <label>
+          <input type="radio" name="q1" value="correct">안녕하세요
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "EXCUSE ME" in Korean?</p>
+        <label>
+          <input type="radio" name="q2" value="incorrect">안녕히 가세요
+        </label>
+        <label>
+          <input type="radio" name="q2" value="correct">미안해
+        </label>
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">안녕하세요
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Please" in Korean?</p>
+        <label>
+          <input type="radio" name="q2" value="incorrect">안녕히 가세요
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">미안해 
+        </label>
+        <label>
+          <input type="radio" name="q2" value="correct">부탁해요 
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Yes" in Korean?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">네
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">미안해 
+        </label>
+        <label>
+          <input type="radio" name="q2" value="correct">부탁해요 
+        </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

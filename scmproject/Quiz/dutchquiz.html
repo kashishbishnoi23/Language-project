@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="DUTCHQUIZ.CSS">
+  <style>
+   
+  
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color:#007bff;
+    margin-left:400px;
+  }
+  
+  .question {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Dutch Language Quiz</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>What is the Dutch word for "Hello"?</p>
+        <label>
+          <input type="radio" name="q1" value="correct">Hallo
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Dank je
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Tot ziens
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Thank you" in Dutch?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">Dank je
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Goedemorgen
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Tot ziens
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Dutch word for "Goodbye"?</p>
+        <label>
+          <input type="radio" name="q3" value="correct">Tot ziens
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Goedemorgen
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Dank je
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Yes" in Dutch?</p>
+        <label>
+          <input type="radio" name="q4" value="correct">Ja
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Nee
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Misschien
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Dutch word for "No"?</p>
+        <label>
+          <input type="radio" name="q5" value="correct">Nee
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Ja
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Misschien
+        </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

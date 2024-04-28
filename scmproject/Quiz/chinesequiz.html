@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="CHINESEQUIZ.CSS">
+  <style>
+  
+  
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color:#007bff;
+    margin-left:400px;
+  }
+  
+  .question {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Chinese Language Quiz</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>What is the Chinese word for "Hello"?</p>
+        <label>
+          <input type="radio" name="q1" value="correct">你好 (Nǐ hǎo)
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">谢谢 (Xièxiè)
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">再见 (Zàijiàn)
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Thank you" in Chinese?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">谢谢 (Xièxiè)
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">对不起 (Duìbuqǐ)
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">你好 (Nǐ hǎo)
+        </label>
+      </div>
+      <div class "question">
+        <p>What is the Chinese word for "Goodbye"?</p>
+        <label>
+          <input type="radio" name="q3" value="correct">再见 (Zàijiàn)
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">谢谢 (Xièxiè)
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">你好 (Nǐ hǎo)
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Yes" in Chinese?</p>
+        <label>
+          <input type="radio" name="q4" value="correct">是的 (Shì de)
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">不是 (Bù shì)
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">可能 (Kěnéng)
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Chinese word for "No"?</p>
+        <label>
+          <input type="radio" name="q5" value="correct">不是 (Bù shì)
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">是的 (Shì de)
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">可能 (Kěnéng)
+        </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

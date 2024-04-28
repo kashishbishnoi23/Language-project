@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+       
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <style>
+             *{
+            margin:0;
+            padding:0;
+            font-family: 'Open Sans', sans-serif;
+            box-sizing:border-box;
+            }
+
+        
+        
+        
+        
+        h1{
+            text-align:center;
+            margin:20px;
+            color:white;
+
+
+        }
+        body{
+            background-color:#3790e9;
+        }
+        .container{
+            display:flex;
+            background-color:white;
+            flex-direction: column;
+            width: 900px;
+            border:2px solid #007fff;
+            margin:30px auto;
+            height:520px;
+            border-radius:20px;
+            padding:20px;
+            
+            
+            
+        }
+        #translate-from{
+            display:inline;
+            align-self:flex-start;
+            font-size:15px;
+            height:50px;
+            width:200px;
+            padding:10px;
+            color:white;
+            
+            background-color:#3790e9;
+        
+        }
+
+        #translate-to{
+            display:inline-block;
+            align-self:flex-start;
+            font-size:15px;
+            font-weight:light;
+            height:50px;
+            width:200px;
+            padding:10px;
+            background-color:#3790e9;
+            color:white;
+
+        
+        }
+        
+        #placeholder1 input{
+            height:140px;
+            width:870px;
+        
+            font-size:20px;
+            text-align:top;
+            border:none;
+
+
+            
+        } 
+
+        .container #image1{
+            position:absolute;
+            right:210px;
+        }  
+
+        .container #image2{
+            position:absolute;
+            bottom:200px;
+            right:210px;
+            
+            
+        }
+
+            
+        
+        
+        
+        
+
+        
+
+
+       
+        
+        input{
+            padding:10px;
+
+        }
+        #translation{
+            height:100px;
+            width:1144px;
+        
+            
+
+        }
+
+       
+
+       
+
+        .icons{
+            display:flex;
+            justify-content:space-between;
+            /* padding:5px; */
+        }
+        
+        hr{
+            z-index:7;
+        }
+        #arrow{
+            margin:2px auto;
+            z-index:2;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- content -->
+
+    <h1>Translator</h1>
+    <div class="container">
+        <select name="language-first" id="translate-from">
+            <option value="English" id="English">English(US)  </option>
+            <option value="Albanian" id="Albanian">Albanian</option>
+            <option value="Arabic" id="Arabic">Arabic</option>
+            <option value="Armenian" id="Armenian">Armenian</option>
+            <option value="Chinese" id="Chinese">Chinese</option>
+            <option value="Danish" id="Danish">Danish</option>
+            <option value="Dutch" id="Dutch">Dutch</option>
+            <option value="Fillipino" id="Fillipino">Fillipino</option>
+            <option value="French" id="French">French</option>
+            <option value="German" id="German">German</option>
+            <option value="Greek" id="Greek">Greek</option>
+            <option value="Hawaiian" id="Hawaiian">Hawaiian</option>
+            <option value="Hindi" id="Hindi">Hindi</option>
+            <option value="Indonesian"id="Indonesian">Indonesian</option>
+            <option value="Irish" id="Irish">Irish</option>
+            <option value="Italian" id="Italian">Italian</option>
+            <option value="Japanese" id="Japanese">Japanese</option>
+            <option value="Korean" id="Korean">Korean</option>
+            <option value="Latin" id="Latin">Latin</option>
+            <option value="Nepali" id="Nepali">Nepali</option>
+            <option value="Persian" id="Persian">Persian</option>
+            <option value="Polish" id="Polish">Polish</option>
+            <option value="Portugese" id="Portugese">Portugese</option>
+            <option value="Romanian" id="Romanian">Romanian</option>
+            <option value="Russian" id="Russian">Russian</option>
+            <option value="Serbian" id="Serbian">Serbian</option>
+            <option value="Spanish" id="Spanish">Spanish</option>
+            <option value="Thai" id="Thai">Thai</option>
+            <option value="Turkish" id="Turkish">Turkish</option>
+            <option value="Ukranian" id="Ukranian">Ukranian</option>
+            <option value="Urdu" id="Urdu">Urdu</option>
+          
+
+        </select>
+    
+        <img id="image1"  src="https://www.clipartmax.com/png/middle/207-2077337_energy-clipart-transparent-sound-icon-png-blue.png" height="30px">
+
+        
+    
+    
+    
+    <div id="placeholder1">
+    <input type="text" class="no-outline" placeholder="Enter your text here" name="langauge1">
+    </div>
+
+
+    <img id="arrow" src="https://cdn-icons-png.flaticon.com/512/143/143213.png" height="50px" width="50px">
+
+    <div id="language2">
+        <select name="language-second" id="translate-to">
+            <option value="Spanish" id="Spanish">Spanish</option>
+            <option value="Albanian" id="Albanian">Albanian</option>
+            <option value="Arabic" id="Arabic">Arabic</option>
+            <option value="Armenian" id="Armenian">Armenian</option>
+            <option value="Chinese" id="Chinese">Chinese</option>
+            <option value="Danish" id="Danish">Danish</option>
+            <option value="Dutch" id="Dutch">Dutch</option>
+            <option value="English" id="English">English(US)</option>
+            <option value="Fillipino" id="Fillipino">Fillipino</option>
+            <option value="French" id="French">French</option>
+            <option value="German" id="German">German</option>
+            <option value="Greek" id="Greek">Greek</option>
+            <option value="Hawaiian" id="Hawaiian">Hawaiian</option>
+            <option value="Hindi" id="Hindi">Hindi</option>
+            <option value="Indonesian"id="Indonesian">Indonesian</option>
+            <option value="Irish" id="Irish">Irish</option>
+            <option value="Italian" id="Italian">Italian</option>
+            <option value="Japanese" id="Japanese">Japanese</option>
+            <option value="Korean" id="Korean">Korean</option>
+            <option value="Latin" id="Latin">Latin</option>
+            <option value="Nepali" id="Nepali">Nepali</option>
+            <option value="Persian" id="Persian">Persian</option>
+            <option value="Polish" id="Polish">Polish</option>
+            <option value="Portugese" id="Portugese">Portugese</option>
+            <option value="Romanian" id="Romanian">Romanian</option>
+            <option value="Russian" id="Russian">Russian</option>
+            <option value="Serbian" id="Serbian">Serbian</option>
+            <option value="Thai" id="Thai">Thai</option>
+            <option value="Turkish" id="Turkish">Turkish</option>
+            <option value="Ukranian" id="Ukranian">Ukranian</option>
+            <option value="Urdu" id="Urdu">Urdu</option>
+          
+
+        </select>
+
+        </div>
+
+        <img id="image2"  src="https://www.clipartmax.com/png/middle/207-2077337_energy-clipart-transparent-sound-icon-png-blue.png" height="30px">
+
+
+    
+    <div id="translation">
+        
+
+    </div>
+
+    <div class="icons">
+        <img src="https://img.icons8.com/?size=120&id=67884&format=png&color=228BE6" height="30px">
+        <img src="icons8-copy-48.png" height="30px">
+        <img src="icons8-heart-30.png" height="30px">
+        <img src="icons8-share-60.png" height="30px">
+    </div>
+    
+
+
+
+
+
+    </div>
+</body>
+</html>
+
+        </style>
+</head>
+<body>
+  
+    
+    
+</body>
+</html>

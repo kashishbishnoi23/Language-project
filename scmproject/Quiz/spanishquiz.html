@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="SPANISH QUIZ.CSS">
+
+  <style>
+    
+  
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color:#007bff;
+    margin-left:400px;
+  }
+  
+  .question {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Spanish Language Quiz</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>What is the Spanish word for "Hello"?</p>
+        <label>
+          <input type="radio" name="q1" value="correct">Hola
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Gracias
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Adiós
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Thank you" in Spanish?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">Gracias
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Sí
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">No
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Spanish word for "Goodbye"?</p>
+        <label>
+          <input type="radio" name="q3" value="correct">Adiós
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Hola
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Gracias
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Yes" in Spanish?</p>
+        <label>
+          <input type="radio" name="q4" value="correct">Sí
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">No
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Quizás
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Spanish word for "No"?</p>
+        <label>
+          <input type="radio" name="q5" value="correct">No
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Sí
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Quizás
+        </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="BRITISHQUIZ.CSS">
+
+  <style>
+  
+  
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color:#007bff;
+    margin-left:400px;
+  }
+  
+  .question {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>British English Language Quiz</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>What do the British call the trunk of a car?</p>
+        <label>
+          <input type="radio" name="q1" value="correct">Boot
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Hood
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Glove compartment
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the British word for "apartment"?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">Flat
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Condo
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Duplex
+        </label>
+      </div>
+      <div class="question">
+        <p>What is a "biscuit" called in British English?</p>
+        <label>
+          <input type="radio" name="q3" value="correct">Cookie
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Cracker
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Scone
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the British word for "elevator"?</p>
+        <label>
+          <input type="radio" name="q4" value="correct">Lift
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Escalator
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Stairs
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the British term for "truck"?</p>
+        <label>
+          <input type="radio" name="q5" value="correct">Lorry
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Van
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Pickup
+        </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

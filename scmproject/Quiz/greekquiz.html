@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="GREEK QUIZ.CSS">
+  <style>
+   
+  
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color:#007bff;
+    margin-left:400px;
+  }
+  
+  .question {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Greek Language Quiz</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>What is the Greek word for "Hello"?</p>
+        <label>
+          <input type="radio" name="q1" value="correct">Γειά σας (Yia sas)
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Ευχαριστώ (Efcharistó)
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Αντίο (Antío)
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Thank you" in Greek?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">Ευχαριστώ (Efcharistó)
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Ναι (Nai)
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Όχι (Ochi)
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Greek word for "Goodbye"?</p>
+        <label>
+          <input type="radio" name="q3" value="correct">Αντίο (Antío)
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Ευχαριστώ (Efcharistó)
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Γειά σας (Yia sas)
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Yes" in Greek?</p>
+        <label>
+          <input type="radio" name="q4" value="correct">Ναι (Nai)
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Όχι (Ochi)
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Ίσως (Isos)
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Greek word for "No"?</p>
+        <label>
+          <input type="radio" name="q5" value="correct">Όχι (Ochi)
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Ναι (Nai)
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Ίσως (Isos)
+        </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>

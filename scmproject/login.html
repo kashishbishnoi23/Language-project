@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login please</title>
+</head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Open+Sans:wght@300;400&family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+    
+    body{
+    
+    
+        background-repeat:no-repeat;
+        background-size:cover;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .contain{
+        display:flex;
+    }
+
+    .container{
+        display:flex;
+        height:fit-content;
+        width:fit-content;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background-color:white;
+        box-sizing:border-box;
+        border:2px solid #007fff;
+        margin:80px 0px 80px 100px;
+        z-index:2;
+        border-radius:10px;
+    
+        
+    }
+
+    .last{
+        display:flex;
+        justify-content:space-between;
+        margin:20px 0px 20px 0px;
+        
+    }
+
+    .last #rememberme{
+        margin-right:43px;
+        color:#007fff;
+
+    }
+   
+
+
+
+    h1{
+        box-sizing:border-box;
+        margin:50px 200px 20px 50px;
+        align-self:flex-start;
+        font-size:25px;
+        font-weight:bold;
+        color:#007fff;
+    }
+
+    #email{
+        margin:20px;
+        height:30px;
+        width:300px;
+    }
+
+    #password{
+        margin:20px;
+        height:30px;
+        width:300px;
+    }
+
+    
+
+    #login{
+        margin:20px;
+        background-color:#007fff;
+        color:white;
+        width:100px;
+        height:30px;
+        border: #007fff;
+
+        font-weight:bold;
+        align-self:flex-end;
+        border-radius:15px;
+    }
+
+    .container2{
+        background-color:#007fff;
+        height:530px;
+        width:700px;
+        display:inline-block;
+        border-radius:15px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        color:white;
+        font-size:30px;
+        line-height:40px;
+        z-index:1;
+        position:absolute;
+        top:40px;
+        left:420px;
+        font-weight:bold;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .container2 #first{
+        font-size:50px;
+        margin-top:20px;
+    }
+
+    .container2 #second{
+        margin-top:10px;
+        width:300px;
+
+    }
+
+    .container2 #btn{
+        margin:20px;
+        background-color:white;
+        color:#007fff;
+        width:100px;
+        height:30px;
+        border:white;
+
+        font-weight:bold;
+        border-radius:15px;
+
+    }
+    </style>
+
+
+    
+
+
+    
+
+
+<body> 
+
+    <div class="contain">
+    
+    <div class="container">
+        <h1>Login</h1>
+        <input type="email" name="email" id="email" placeholder="EMAIL">
+        <input type="password" name="password" id="password" placeholder="PASSWORD">
+    
+        <button type="button" id="login">LOGIN -> </button>
+
+        <div class="last">
+            <div id="rememberme"><input type="checkbox"  value="Remember me">Remember me</div>
+        
+            <a id="forgotpw" href="">Forgot Password?</a>
+    
+        </div>
+        
+        </div>
+
+        <div class="container2">
+            <p id="first">WELCOME!</p>
+            <p id="second">Enter your details and start your journey with us (:</p>
+            <button id="btn">SIGN UP</button>
+        </div>
+
+        
+
+        </div>
+</body>
+</html>

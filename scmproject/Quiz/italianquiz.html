@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="ITALIAN QUIZ.CSS">
+  <style>
+    
+  
+  .quiz-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color:#007bff;
+    margin-left:400px;
+  }
+  
+  .question {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Italian Language Quiz</h1>
+    <form id="quiz-form">
+      <div class="question">
+        <p>What is the Italian word for "Hello"?</p>
+        <label>
+          <input type="radio" name="q1" value="correct">Ciao
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Grazie
+        </label>
+        <label>
+          <input type="radio" name="q1" value="incorrect">Arrivederci
+        </label>
+      </div>
+      <div class "question">
+        <p>How do you say "Thank you" in Italian?</p>
+        <label>
+          <input type="radio" name="q2" value="correct">Grazie
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">Sì
+        </label>
+        <label>
+          <input type="radio" name="q2" value="incorrect">No
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Italian word for "Goodbye"?</p>
+        <label>
+          <input type="radio" name="q3" value="correct">Arrivederci
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Ciao
+        </label>
+        <label>
+          <input type="radio" name="q3" value="incorrect">Grazie
+        </label>
+      </div>
+      <div class="question">
+        <p>How do you say "Yes" in Italian?</p>
+        <label>
+          <input type="radio" name="q4" value="correct">Sì
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">No
+        </label>
+        <label>
+          <input type="radio" name="q4" value="incorrect">Forse
+        </label>
+      </div>
+      <div class="question">
+        <p>What is the Italian word for "No"?</p>
+        <label>
+          <input type="radio" name="q5" value="correct">No
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Sì
+        </label>
+        <label>
+          <input type="radio" name="q5" value="incorrect">Forse
+        </label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
